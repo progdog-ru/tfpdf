@@ -23,7 +23,10 @@
 // 0x00010000 for Windows
 // Either seems to work for a font embedded in a PDF file
 // when read by Adobe Reader on a Windows PC(!)
-define("_TTF_MAC_HEADER", false);
+if (!defined('_TTF_MAC_HEADER')) {
+	define("_TTF_MAC_HEADER", false);
+}
+
 
 
 // TrueType Font Glyph operators
@@ -1084,6 +1087,3 @@ var $maxStrLenRead;
 
 
 }
-
-
-?>
