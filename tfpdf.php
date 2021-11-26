@@ -2471,7 +2471,7 @@ class tFPDF
 		if ($setbom) {
 			$outstr .= "\xFE\xFF"; // Byte Order Mark (BOM)
 		}
-		$outstr .= mb_convert_encoding($str, 'UTF-16BE', 'UTF-8');
+		$outstr .= mb_convert_encoding((string) $str, 'UTF-16BE', 'UTF-8');
 		return $outstr;
 	}
 
