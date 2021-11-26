@@ -1873,7 +1873,7 @@ class tFPDF
 			$this->pages[$n] = str_replace($alias, $r, $this->pages[$n]);
 			// Now repeat for no pages in non-subset fonts
 
-			$this->pages[$n] = str_replace($this->AliasNbPages, $this->page, $this->pages[$n]);
+			$this->pages[$n] = str_replace($this->AliasNbPages, (string) $this->page, $this->pages[$n]);
 		}
 		$this->_putstreamobject($this->pages[$n]);
 	}
